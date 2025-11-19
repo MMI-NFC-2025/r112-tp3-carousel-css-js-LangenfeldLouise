@@ -6,10 +6,12 @@ img {
 }
 
 .carousel__wrapper {
+  display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  margin-left: -1%;
-  margin-right: -1%;
+  margin-left: -1px;
+  margin-right: -1px;
+  position: relative;
 }
 /* Mise en forme du carousel en CSS.
 Utiliser flex pour positionner les item du carousel les uns à coté des autres.
@@ -54,7 +56,7 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
 }
 
 .carousel__item {
-  flex: 1 260px;/* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 260px - https://developer.mozilla.org/fr/docs/Web/CSS/flex */
+  flex: 1 0 100%;/* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 260px - https://developer.mozilla.org/fr/docs/Web/CSS/flex */
   scroll-snap-align: center;/* Aligne l'élément au centre lors du défilement - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-align */
 }
 
